@@ -1,14 +1,23 @@
-## 
+## Local environment setup
 
-#. cp template.env local.env
-#. Edit local.env
-#. pipenv install
-#. pipenv shell
+Requires python 3.6+
 
-## How to push new changes
+1. cp template.env local.env
+2. Edit local.env
+3. pipenv install
+4. pipenv shell
 
-#. zappa update
+## Push new changes to AWS Lambda
 
-## How to run the code on lambda
+1. pipenv shell
+2. zappa update
 
-## How to run the code locally
+## Running the code on AWS Lambda
+
+1. pipenv shell
+2. zappa invoke monitor.monitor
+
+## Running the code locally
+
+1. pipenv shell
+2. python monitor
