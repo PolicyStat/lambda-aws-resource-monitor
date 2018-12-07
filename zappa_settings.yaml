@@ -1,0 +1,17 @@
+main:
+  apigateway_enabled: false
+  keep_warm: false
+  s3_bucket: pstat-zappa-deploys-tpzx4bbln
+  runtime: python3.6
+  aws_region: us-east-1
+  project_name: aws-resource-monitor
+  memory_size: 128
+  num_retained_versions: 10
+  timeout_seconds: 60
+  delete_local_zip: true
+  exclude:
+    - .env
+    - local.env
+  events:
+    - function: monitor.monitor
+      expression: rate(5 minutes)
