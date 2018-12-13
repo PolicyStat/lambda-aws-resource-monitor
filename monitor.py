@@ -20,6 +20,9 @@ def monitor():
     ec2_instances = list(get_all_ec2_instances())
     ec2_full_names = []
     for region, instance in ec2_instances:
+        state = instance.state.get('Name', None)
+        if state == 'terminated':
+            continue
         full_name = get_proper_ec2_name(region, instance)
         if full_name not in expected_ec2_instances:
             ec2_full_names.append(full_name)
@@ -148,7 +151,8 @@ def get_all_rds_instances():
     for region in rds_regions:
         conn = boto3.client('rds', region_name=region)
         result = conn.describe_db_instances()
-        for instance in result['DBInstances']:
+        instances = result.get('DBInstances', [])
+        for instance in instances:
             yield region, instance
 
 
