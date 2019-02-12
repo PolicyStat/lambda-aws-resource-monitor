@@ -8,10 +8,12 @@ main:
   memory_size: 128
   num_retained_versions: 10
   timeout_seconds: 60
-  delete_local_zip: true
+  delete_local_zip: false
   exclude:
     - .env
-    - local.env
+    - .deploy
+    - .direnv
+    - botocore
   events:
     - function: monitor.monitor
       expression: rate(5 minutes)
