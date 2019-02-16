@@ -1,1 +1,1 @@
-zappa==0.47.1
+requirements/base.txt
