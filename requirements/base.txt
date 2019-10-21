@@ -120,9 +120,9 @@ urllib3==1.24.1 \
     --hash=sha256:61bf29cada3fc2fbefad4fdf059ea4bd1b4a86d2b6d15e1c7c0b582b9752fe39 \
     --hash=sha256:de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22 \
     # via botocore, requests
-werkzeug==0.14.1 \
-    --hash=sha256:c3fd7a7d41976d9f44db327260e263132466836cef6f91512889ed60ad26557c \
-    --hash=sha256:d5da73735293558eb1651ee2fddc4d0dedcfa06538b8813a2e20011583c9e49b \
+werkzeug==0.15.3 \
+    --hash=sha256:97660b282aa7e29f94f3fe378e5c7162d7ab9d601a8dbb1cbb2ffc8f0e54607d \
+    --hash=sha256:cfd1281b1748288e59762c0e174d64d8bcb2b70e7c57bc4a1203c8825af24ac3 \
     # via zappa
 wheel==0.33.0 \
     --hash=sha256:12363e6df5678ecf9daf8429f06f97e7106e701405898f24318ce7f0b79c611a \
