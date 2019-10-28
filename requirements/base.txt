@@ -116,9 +116,9 @@ unidecode==1.0.23 \
     --hash=sha256:092cdf7ad9d1052c50313426a625b717dab52f7ac58f859e09ea020953b1ad8f \
     --hash=sha256:8b85354be8fd0c0e10adbf0675f6dc2310e56fda43fa8fe049123b6c475e52fb \
     # via python-slugify
-urllib3==1.24.1 \
-    --hash=sha256:61bf29cada3fc2fbefad4fdf059ea4bd1b4a86d2b6d15e1c7c0b582b9752fe39 \
-    --hash=sha256:de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22 \
+urllib3==1.24.2 \
+    --hash=sha256:4c291ca23bbb55c76518905869ef34bdd5f0e46af7afe6861e8375643ffee1a0 \
+    --hash=sha256:9a247273df709c4fedb38c711e44292304f73f39ab01beda9f6b9fc375669ac3 \
     # via botocore, requests
 werkzeug==0.14.1 \
     --hash=sha256:c3fd7a7d41976d9f44db327260e263132466836cef6f91512889ed60ad26557c \
