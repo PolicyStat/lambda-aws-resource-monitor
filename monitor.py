@@ -1,3 +1,4 @@
+import botocore
 import boto3
 import logging
 import os
@@ -150,7 +151,14 @@ def get_all_rds_instances():
     rds_regions = get_rds_regions()
     for region in rds_regions:
         conn = boto3.client('rds', region_name=region)
-        result = conn.describe_db_instances()
+        try:
+            result = conn.describe_db_instances()
+        except botocore.exceptions.ClientError as e:
+            if e.response['Error']['Code'] == 'InvalidClientTokenId':
+                # This is a disabled region, skip it
+                continue
+            raise
+
         instances = result.get('DBInstances', [])
         for instance in instances:
             yield region, instance
